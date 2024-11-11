@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="Reg.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="image-container">
+        <img src="jay2.png" alt="Login Image" />
+      </div>
+      <div class="form-container">
+        <h2>Sign Up</h2>
+        <form onsubmit="return validateRegInForm()" action="index.html">
+          <script>
+            $(document).ready(function () {
+              $("input").focus(function () {
+                $(this).css("background-color", "lightblue");
+              });
+              $("input").blur(function () {
+                $(this).css("background-color", "#838b92");
+              });
+            });
+          </script>
+          <center>
+            <div class="inpdiv">
+              <input
+                type="text"
+                id="un"
+                name="un"
+                class="input-field"
+                placeholder="User Name"
+              />
+              <span id="un-error" class="error-message"></span>
+            </div>
+            <br />
+
+            <div class="inpdiv">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="input-field"
+                placeholder="Email"
+              />
+              <span id="email-error" class="error-message"></span>
+            </div>
+            <br />
+
+            <div class="inpdiv">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="input-field"
+                placeholder="Password"
+              />
+              <span id="password-error" class="error-message"></span>
+            </div>
+            <br />
+
+            <div class="inpdiv">
+              <input
+                type="password"
+                id="confirm-password"
+                name="Confirm-password"
+                class="input-field"
+                placeholder="Confirm Password"
+              />
+              <span id="confirm-password-error" class="error-message"></span>
+            </div>
+            <input type="submit" value="Submit" class="submit-button" />
+          </center>
+        </form>
+      </div>
+    </div>
+    <script src="Reg.js"></script>
+  </body>
+</html>
